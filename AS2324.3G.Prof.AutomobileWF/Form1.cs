@@ -59,5 +59,23 @@ namespace AS2324._3G.Prof.AutomobileWF
                 MessageBox.Show("Allaccia le cinture");
             }
         }
+
+        private void cmbStrada_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbStrada.SelectedIndex == 0)
+            {
+                prbVelocita.Maximum = 50;
+            }
+            else if(cmbStrada.SelectedIndex == 1)
+            {
+                prbVelocita.Maximum = 90;
+            }
+            else if(cmbStrada.SelectedIndex == 2)
+            {
+                prbVelocita.Maximum = 130;
+            }
+        }
+
+
     }
 }
