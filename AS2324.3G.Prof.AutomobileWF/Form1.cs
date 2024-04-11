@@ -47,5 +47,17 @@ namespace AS2324._3G.Prof.AutomobileWF
                 grbComandi.Enabled = false;
 
         }
+
+        private void chkAccensione_CheckedChange(object sender, EventArgs e)
+        {
+            if (chkAccensione.Checked == true)
+                grbComandi.Enabled = true;
+            else
+                grbComandi.Enabled = false;
+            if (chkAccensione.Checked == true && chkCinture.Checked == false)
+            {
+                MessageBox.Show("Allaccia le cinture");
+            }
+        }
     }
 }
